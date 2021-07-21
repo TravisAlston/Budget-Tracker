@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+//MongoDB Atlas url needs to be attached to Heroku before app will funciton
 const mongoUri = process.env.MONGODB_URI || "mongodb://localhost/budget";
 mongoose.connect(mongoUri, {
   useNewUrlParser: true,
